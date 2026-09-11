@@ -1,0 +1,133 @@
+/* Hallmark · macrostructure: Statement-Dossier · tone: luxury · anchor hue: gold-amber */
+@import url("tokens.css");
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=DM+Sans:wght@400;500;700&display=swap");
+
+html, body { overflow-x: clip; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  font-size: var(--text-body);
+  line-height: 1.7;
+}
+h1, h2, h3 { font-family: var(--font-display); font-style: normal; font-weight: 600; line-height: 1.15; overflow-wrap: anywhere; min-width: 0; }
+a { color: var(--color-accent); }
+.wrap { max-width: 1080px; margin: 0 auto; padding: 0 var(--space-sm); }
+
+/* Floating pill nav */
+.nav {
+  position: sticky; top: 12px; z-index: 50;
+  display: flex; gap: var(--space-sm); align-items: center; justify-content: space-between;
+  max-width: 1080px; margin: 12px auto 0; padding: 10px 20px;
+  background: color-mix(in oklch, var(--color-paper-2) 88%, transparent);
+  border: 1px solid var(--color-line); border-radius: 999px;
+  backdrop-filter: blur(8px);
+}
+.nav .wordmark { font-family: var(--font-display); font-weight: 700; font-size: 1.2rem; color: var(--color-accent); text-decoration: none; }
+.nav .links { display: flex; gap: 18px; }
+.nav .links a { color: var(--color-ink-dim); text-decoration: none; font-size: 0.92rem; }
+.nav .links a:hover, .nav .links a:focus-visible { color: var(--color-accent); }
+.nav .cta {
+  background: var(--color-accent); color: #14100a; font-weight: 700;
+  padding: 8px 18px; border-radius: 999px; text-decoration: none; font-size: 0.92rem;
+}
+.nav .cta:hover { background: var(--color-ink); }
+
+/* Hero */
+.hero { padding: var(--space-xl) 0 var(--space-lg); text-align: left; }
+.hero .kicker { color: var(--color-accent); text-transform: uppercase; letter-spacing: 3px; font-size: 0.8rem; margin-bottom: var(--space-sm); }
+.hero h1 { font-size: var(--text-hero); margin-bottom: var(--space-sm); }
+.hero h1 .gold { color: var(--color-accent); }
+.hero p.lede { font-size: 1.25rem; color: var(--color-ink-dim); max-width: 640px; margin-bottom: var(--space-md); }
+.hero .btnrow { display: flex; gap: 12px; flex-wrap: wrap; }
+.btn {
+  display: inline-block; padding: 12px 26px; border-radius: 999px; text-decoration: none; font-weight: 700;
+  background: var(--color-accent); color: #14100a; transition: transform var(--dur-1) var(--ease-out);
+}
+.btn:hover { transform: translateY(-2px); }
+.btn.ghost { background: transparent; color: var(--color-accent); border: 1px solid var(--color-accent); }
+
+/* Doubt section */
+.doubt { padding: var(--space-lg) 0; }
+.doubt h2 { font-size: var(--text-h2); margin-bottom: var(--space-md); }
+.doubt-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: var(--space-sm); }
+.doubt-card {
+  background: var(--color-card); border: 1px solid var(--color-line);
+  border-radius: var(--radius); padding: var(--space-md);
+}
+.doubt-card .q { color: var(--color-accent); font-weight: 700; margin-bottom: 8px; }
+.doubt-card .a { color: var(--color-ink-dim); }
+
+/* Journey timeline */
+.journey { padding: var(--space-lg) 0; }
+.journey h2 { font-size: var(--text-h2); margin-bottom: var(--space-md); }
+.steps { display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--space-md); }
+.step { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: var(--space-md); align-items: center; }
+.step:nth-child(even) .ph { order: 2; }
+.step figure { margin: 0; }
+.step img {
+  width: 100%; height: auto; display: block; border-radius: var(--radius);
+  border: 1px solid var(--color-line);
+}
+.step .cap h3 { font-size: var(--text-h3); color: var(--color-accent); margin-bottom: 6px; }
+.step .cap p { color: var(--color-ink-dim); }
+
+/* Roles */
+.roles { padding: var(--space-lg) 0; }
+.roles h2 { font-size: var(--text-h2); margin-bottom: var(--space-md); }
+.role-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-sm); }
+.role-card {
+  background: var(--color-card); border: 1px solid var(--color-line);
+  border-radius: var(--radius); padding: var(--space-md);
+}
+.role-card h3 { color: var(--color-accent); font-size: 1.15rem; margin-bottom: 8px; }
+.role-card p { color: var(--color-ink-dim); font-size: 0.95rem; }
+
+/* Salary explainer — the key section */
+.salary { padding: var(--space-lg) 0; }
+.salary .box {
+  background: linear-gradient(160deg, var(--color-paper-2), var(--color-card));
+  border: 1px solid var(--color-accent-deep); border-radius: var(--radius);
+  padding: var(--space-lg) var(--space-md);
+}
+.salary h2 { font-size: var(--text-h2); margin-bottom: var(--space-sm); }
+.salary h2 .gold { color: var(--color-accent); }
+.salary .math {
+  font-family: var(--font-display); font-size: 1.3rem; color: var(--color-accent);
+  border-left: 3px solid var(--color-accent); padding-left: var(--space-sm);
+  margin: var(--space-md) 0;
+}
+.salary ul { margin-left: 20px; color: var(--color-ink-dim); }
+.salary li { margin-bottom: 8px; }
+
+/* Company facts */
+.facts { padding: var(--space-lg) 0; }
+.facts h2 { font-size: var(--text-h2); margin-bottom: var(--space-md); }
+.fact-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-sm); }
+.fact {
+  border: 1px solid var(--color-line); border-radius: var(--radius);
+  padding: var(--space-md); background: var(--color-card);
+}
+.fact .n { font-family: var(--font-display); font-size: 2rem; color: var(--color-accent); }
+.fact .t { color: var(--color-ink-dim); font-size: 0.95rem; }
+
+/* Footer statement */
+footer { padding: var(--space-xl) 0 var(--space-lg); text-align: center; border-top: 1px solid var(--color-line); margin-top: var(--space-lg); }
+footer .big { font-family: var(--font-display); font-size: clamp(1.8rem, 5vw, 3rem); margin-bottom: var(--space-sm); }
+footer .big .gold { color: var(--color-accent); }
+footer p { color: var(--color-ink-dim); margin-bottom: var(--space-md); }
+footer .fine { font-size: 0.8rem; color: var(--color-ink-dim); margin-top: var(--space-md); }
+
+:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 3px; }
+@media (prefers-reduced-motion: reduce) {
+  * { transition-duration: 150ms !important; animation-duration: 150ms !important; }
+}
+
+@media (max-width: 768px) {
+  .doubt-grid, .role-grid, .fact-grid { grid-template-columns: minmax(0, 1fr); }
+  .step { grid-template-columns: minmax(0, 1fr); }
+  .step:nth-child(even) .ph { order: 0; }
+  .nav .links { display: none; }
+  .hero { padding: var(--space-lg) 0 var(--space-md); }
+}

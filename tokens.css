@@ -1,0 +1,27 @@
+/* Hallmark · macrostructure: Statement-Dossier · tone: luxury · anchor hue: gold-amber */
+/* R Company investor site tokens — charcoal paper, cream ink, gold accent */
+:root {
+  --color-paper: oklch(17% 0.01 80);
+  --color-paper-2: oklch(21% 0.015 80);
+  --color-ink: oklch(92% 0.02 85);
+  --color-ink-dim: oklch(72% 0.03 80);
+  --color-accent: oklch(72% 0.14 85);
+  --color-accent-deep: oklch(55% 0.12 80);
+  --color-line: oklch(32% 0.02 80);
+  --color-card: oklch(23% 0.015 80);
+  --font-display: "Cormorant Garamond", Georgia, serif;
+  --font-body: "DM Sans", "Segoe UI", sans-serif;
+  --space-xs: 8px;
+  --space-sm: 16px;
+  --space-md: 32px;
+  --space-lg: 64px;
+  --space-xl: 96px;
+  --text-hero: clamp(2.6rem, 7vw, 5rem);
+  --text-h2: clamp(1.7rem, 4vw, 2.6rem);
+  --text-h3: clamp(1.2rem, 2.6vw, 1.6rem);
+  --text-body: 1.05rem;
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --dur-1: 200ms;
+  --dur-2: 450ms;
+  --radius: 14px;
+}
